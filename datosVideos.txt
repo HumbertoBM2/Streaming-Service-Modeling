@@ -1,0 +1,97 @@
+p 101 The_Taste_Of_Cherry Drama 126 5
+p 102 Parasites Drama 132 5
+p 103 Avatar Ciencia_ficcion 161 4
+p 104 Eternal_Sunshine_Of_The_Spotless_Mind Drama 108 5
+p 105 Titanic Drama 195 4
+p 106 Memento Suspenso 116 5
+p 107 Super_Mario_Bros 93 4
+p 108 The_Shawshank_Redemption Drama 142 5
+p 109 Pulp_Fiction Drama 154 5
+p 110 The_Godfather Drama 175 5
+p 111 Fight_Club Drama 139 5
+p 112 The_Matrix Ciencia_ficción 136 5
+p 113 Inception Ciencia_ficción 148 5
+p 114 Forrest_Gump Drama 142 4
+p 115 The_Dark_Knight Acción 152 5
+p 116 The_Lion_King Animación 88 4
+p 117 The_Green_Mile Drama 189 4
+p 118 Schindler's_List Drama 195 5
+p 119 Goodfellas Drama 146 4
+p 120 The_Prestige Drama 130 5
+p 121 Interstellar Ciencia_ficción 169 4
+p 122 Whiplash Drama 107 5
+p 123 The_Social_Network Drama 120 4
+p 124 The_Departed Drama 151 5
+p 125 American_History_X Drama 119 4
+p 126 Inglourious_Basterds Drama 153 5
+p 127 The_Silence_of_the_Lambs Suspense 118 5
+p 128 The_Usual_Suspects Suspense 106 5
+p 129 The_Wolf_of_Wall_Street Drama 180 4
+p 130 The_Great_Gatsby Drama 143 4
+p 131 The_Revenant Drama 156 4
+p 132 Django_Unchained Drama 165 5
+p 133 The_Hateful_Eight Drama 187 4
+p 134 The_Big_Lebowski Comedia 117 4
+p 135 Toy_Story Animación 81 5
+p 136 Finding_Nemo Animación 100 4
+p 137 Shutter_Island Suspense 138 5
+p 138 The_Avengers Acción 143 4
+p 139 The_Witcher Acción 130 4
+p 140 Blade_Runner Ciencia_ficción 117 5
+p 141 Arrival Ciencia_ficción 116 4
+p 142 The_Grand_Budapest_Hotel Comedia 99 5
+p 143 Joker Drama 122 5
+p 144 Mad_Max_Fury_Road Acción 120 5
+p 145 La_La_Land Drama 128 4
+p 146 The_Shining Terror 146 5
+p 147 The_Godfather_Part_II Drama 202 5
+p 148 No_Country_for_Old_Men Drama 122 5
+p 149 Oldboy Suspense 120 5
+p 150 Amélie Comedia 122 4
+p 151 Reservoir_Dogs Drama 99 5
+p 152 The_Hangover Comedia 100 4
+e 200 Pilot Drama 45 2 Breaking_Bad E1 T1
+e 201 Cat's_in_the_Cradle Drama 45 3 Breaking_Bad E2 T1
+e 202 Gray_Matter Drama 45 2 Breaking_Bad E5 T1
+e 203 Angel's_Egg Anime 23 4 Neon_Genesis_Evangelion E7 T1
+e 204 The_Beast Anime 23 3 Neon_Genesis_Evangelion E9 T1
+e 205 The_Moment_of_Decision Anime 23 5 Neon_Genesis_Evangelion E10 T1
+e 206 Chichipatos Telenovela 20 2 Betty_La_Fea E1 T1
+e 207 Cambio_de_look Telenovela 20 3 Betty_La_Fea E20 T1
+e 208 El_plan_de_evasion Telenovela 20 4 Betty_La_Fea E100 T1
+e 209 The_Boy_in_the_Iceberg Anime 24 4 Avatar E1 T1
+e 210 The_Avatar_Returns Anime 24 4 Avatar E2 T1
+e 211 The_Storm Anime 24 4 Avatar E12 T1
+e 212 Uno Drama 42 5 Better_Call_Saul E1 T1
+e 213 Five-O Drama 42 4 Better_Call_Saul E6 T1
+e 214 Lantern Drama 42 5 Better_Call_Saul E10 T3
+e 215 Pilot Drama 50 5 The_Sopranos E1 T1
+e 216 Funhouse Drama 50 3 The_Sopranos E13 T2
+e 217 Made_in_America Drama 50 4 The_Sopranos E21 T6
+e 218 Pilot Comedia 20 2 The_Office E1 T1
+e 219 Dinner_Party Comedia 20 5 The_Office E13 T4
+e 220 Goodbye,_Michael Comedia 20 3 The_Office E22 T7
+e 221 Northwest_Passage Suspenso 48 4 Twin_Peaks E9 T2
+e 222 Beyond_Life_and_Death Suspenso 48 4 Twin_Peaks E22 T2
+e 223 Part_17 Suspenso 48 5 Twin_Peaks E17 T3
+e 224 The_Crocodile's_Dilemma Crimen 50 3 Fargo E1 T1
+e 225 The_Law_of_Non-Contradiction Crimen 50 4 Fargo E3 T3
+e 226 Somebody_to_Love Crimen 50 3 Fargo E8 T4
+e 227 Descenso Crimen 47 3 Narcos E1 T1
+e 228 The_Cathedrals_of_Crime Crimen 47 5 Narcos E6 T2
+e 229 The_Good_the_Bad_and_the_Dead Crimen 47 4 Narcos E10 T3
+e 230 I'm_Luffy!_The_Man_Who's_Going_to_Be_King_of_the_Pirates! Anime 20 3 One_Piece E1 T1
+e 231 Luffy_vs._Arlong Anime 20 4 One_Piece E31 T2
+e 232 The_Most_Evil_Bride_in_the_World Anime 20 4 One_Piece E89 T5
+e 233 Homecoming Anime 20 4 Naruto_Shippuden E1 T1
+e 234 The_Three_Tails_Appears Anime 20 4 Naruto_Shippuden E54 T2
+e 235 The_Boy_with_the_Sharingan Anime 20 4 Naruto_Shippuden E82 T3
+e 236 Weird Anime 20 5 Serial_Experiments_Lain E1 T1
+e 237 Girls Anime 20 5 Serial_Experiments_Lain E5 T1
+e 238 Landscape Anime 20 5 Serial_Experiments_Lain E9 T1
+e 239 Help_Wanted Animacion 11 3 Bob_Esponja E1 T1
+e 240 Reef_Blower Animacion 11 3 Bob_Esponja E2 T1
+e 241 Bubblestand Animacion 11 5 Bob_Esponja E3 T1
+e 242 The_Power Animacion 12 5 Un_Show_Mas E1 T1
+e 243 Exit_9B Animacion 12 5 Un_Show_Mas E26 T3
+e 244 The_Last_Laugh Animacion 12 5 Un_Show_Mas E35 T4

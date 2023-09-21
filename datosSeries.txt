@@ -1,0 +1,15 @@
+1 Breaking_Bad
+2 Neon_Genesis_Evangelion
+3 Betty_La_Fea
+4 Avatar
+5 Better_Call_Saul
+6 The_Sopranos
+7 The_Office
+8 Twin_Peaks
+9 Fargo
+10 Narcos
+11 One_Piece
+12 Naruto_Shippuden
+13 Serial_Experiments_Lain
+14 Bob_Esponja
+15 Un_Show_Mas
