@@ -1,7 +1,7 @@
-// Humberto Barrera Martínez 
-// Isaac Saca Monroy 
-// 09/06/2023 
-// Clase Serie.h que tiene composición con Episodio.h 
+// Humberto Barrera Martínez
+// Isaac Saca Monroy
+// 09/06/2023
+// Clase Serie.h que tiene composición con Episodio.h
 
 #ifndef Serie_h
 #define Serie_h
@@ -10,163 +10,121 @@
 
 class Serie {
 
-private: 
+private:
+  // Atributos privados
+  int ID;
+  string titulo;
+  vector<Episodio *> episodios;
 
-	// Atributos privados 
-	int ID;
-	string titulo;
-	vector <Episodio*> episodios;
+public:
+  // Constructores
 
-public: 
+  // Default
+  Serie();
 
-	// Constructores 
+  // Con parámetros
+  Serie(string titulo);
+  Serie(int ID, string titulo);
+  Serie(int ID, string titulo, vector<Episodio *> episodios);
 
-	// Default 
-	Serie();
+  // Setters
+  void setID(int ID);
+  void setTitulo(string titulo);
+  void setEpisodios(vector<Episodio *> episodios);
 
-	// Con parámetros 
-	Serie(string titulo);
-	Serie(int ID, string titulo);
-	Serie(int ID, string titulo, vector <Episodio*> episodios);
+  // Getters
+  int getID();
+  string getTitulo();
+  vector<Episodio *> getEpisodios();
 
-	// Setters 
-	void setID(int ID);
-	void setTitulo(string titulo);
-	void setEpisodios(vector <Episodio*> episodios);
-
-	// Getters 
-	int getID();
-	string getTitulo();
-	vector <Episodio*> getEpisodios();
-
-	// Métodos 
-	void mostrarEpisodios();
-	void mostrarDatosSerie();
-	void mostrarEpisodiosCalificacion(int calificacion);
-	void agregarEpisodio(Episodio* episodio);
-
-
+  // Métodos
+  void mostrarEpisodios();
+  void mostrarDatosSerie();
+  void mostrarEpisodiosCalificacion(int calificacion);
+  void agregarEpisodio(Episodio *episodio);
 };
 
 // Constructores
-Serie::Serie(){
+Serie::Serie() {
 
-	ID = 0;
-	titulo = "-";
-	episodios = {};
-
+  ID = 0;
+  titulo = "-";
+  episodios = {};
 }
 
-Serie::Serie(string titulo){
+Serie::Serie(string titulo) {
 
-	ID = 0;
-	this -> titulo = titulo;
-	episodios = {};
-
+  ID = 0;
+  this->titulo = titulo;
+  episodios = {};
 }
 
-Serie::Serie(int ID, string titulo){
+Serie::Serie(int ID, string titulo) {
 
-	this -> ID = ID;
-	this -> titulo = titulo;
-	episodios = {};
-
+  this->ID = ID;
+  this->titulo = titulo;
+  episodios = {};
 }
 
-Serie::Serie(int ID, string titulo, vector <Episodio*> episodios){
+Serie::Serie(int ID, string titulo, vector<Episodio *> episodios) {
 
-	this -> ID = ID; 
-	this -> titulo = titulo;
-	this -> episodios = episodios;
-
+  this->ID = ID;
+  this->titulo = titulo;
+  this->episodios = episodios;
 }
 
+// Setters
 
-// Setters 
+void Serie::setID(int ID) { this->ID = ID; }
 
-void Serie::setID(int ID){
+void Serie::setTitulo(string titulo) { this->titulo = titulo; }
 
-	this -> ID = ID;
+void Serie::setEpisodios(vector<Episodio *> episodios) {
 
+  this->episodios = episodios;
 }
 
-void Serie::setTitulo(string titulo){
+// Getters
 
-	this -> titulo = titulo;
+int Serie::getID() { return ID; }
 
+string Serie::getTitulo() { return titulo; }
+
+vector<Episodio *> Serie::getEpisodios() { return episodios; }
+
+// Métodos
+
+void Serie::mostrarEpisodios() {
+
+  for (size_t i = 0; i < episodios.size(); i++) {
+
+    episodios[i]->imprimirInfo();
+  }
 }
 
-void Serie::setEpisodios(vector <Episodio*> episodios){
+void Serie::mostrarDatosSerie() {
 
-	this -> episodios = episodios;
-
+  cout << endl;
+  cout << "Serie" << endl;
+  cout << "ID: " << ID << endl;
+  cout << "Titulo: " << titulo << endl;
+  cout << "Episodios: " << endl;
 }
 
+void Serie::mostrarEpisodiosCalificacion(int calificacion) {
 
-// Getters 
+  for (size_t i = 0; i < episodios.size(); i++) {
 
-int Serie::getID(){
+    if (episodios[i]->getCalificacion() == calificacion) {
 
-	return ID; 
-
+      episodios[i]->imprimirInfo();
+    }
+  }
 }
 
-string Serie::getTitulo(){
+void Serie::agregarEpisodio(Episodio *episodio) {
 
-	return titulo;
-
+  episodios.push_back(episodio);
 }
-
-vector <Episodio*> Serie::getEpisodios(){
-
-	return episodios;
-
-}
-
-
-// Métodos 
-
-void Serie::mostrarEpisodios(){
-
-	for (size_t i = 0; i < episodios.size(); i++){
-
-		episodios[i]->imprimirInfo();
-
-	}
-
-}
-
-void Serie::mostrarDatosSerie(){
-
-	cout << endl;
-	cout << "Serie" << endl;
-	cout << "ID: " << ID << endl;
-	cout << "Titulo: " << titulo << endl;
-	cout << "Episodios: " << endl;
-
-
-}
-
-void Serie::mostrarEpisodiosCalificacion(int calificacion){
-
-	for (size_t i = 0; i < episodios.size(); i++){
-
-		if (episodios[i]->getCalificacion() == calificacion){
-
-			episodios[i]->imprimirInfo();
-
-		}
-
-	}
-
-}
-
-
-void Serie::agregarEpisodio(Episodio* episodio){
-
-	episodios.push_back(episodio);
-
-}
-
 
 #endif
