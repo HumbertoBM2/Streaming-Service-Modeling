@@ -46,28 +46,24 @@ public:
 
 // Constructores
 Serie::Serie() {
-
   ID = 0;
   titulo = "-";
   episodios = {};
 }
 
 Serie::Serie(string titulo) {
-
   ID = 0;
   this->titulo = titulo;
   episodios = {};
 }
 
 Serie::Serie(int ID, string titulo) {
-
   this->ID = ID;
   this->titulo = titulo;
   episodios = {};
 }
 
 Serie::Serie(int ID, string titulo, vector<Episodio *> episodios) {
-
   this->ID = ID;
   this->titulo = titulo;
   this->episodios = episodios;
@@ -80,7 +76,6 @@ void Serie::setID(int ID) { this->ID = ID; }
 void Serie::setTitulo(string titulo) { this->titulo = titulo; }
 
 void Serie::setEpisodios(vector<Episodio *> episodios) {
-
   this->episodios = episodios;
 }
 
@@ -95,15 +90,12 @@ vector<Episodio *> Serie::getEpisodios() { return episodios; }
 // Métodos
 
 void Serie::mostrarEpisodios() {
-
   for (size_t i = 0; i < episodios.size(); i++) {
-
     episodios[i]->imprimirInfo();
   }
 }
 
 void Serie::mostrarDatosSerie() {
-
   cout << endl;
   cout << "Serie" << endl;
   cout << "ID: " << ID << endl;
@@ -112,18 +104,14 @@ void Serie::mostrarDatosSerie() {
 }
 
 void Serie::mostrarEpisodiosCalificacion(int calificacion) {
-
   for (size_t i = 0; i < episodios.size(); i++) {
-
     if (episodios[i]->getCalificacion() == calificacion) {
-
       episodios[i]->imprimirInfo();
     }
   }
 }
 
 void Serie::agregarEpisodio(Episodio *episodio) {
-
   episodios.push_back(episodio);
 }
 

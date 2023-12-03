@@ -46,7 +46,6 @@ public:
 // Constructores
 
 Video::Video() {
-
   ID = 0;
   nombre = "-";
   genero = "-";
@@ -56,7 +55,6 @@ Video::Video() {
 
 Video::Video(int ID, string nombre, string genero, int duracion,
              int calificacion) {
-
   this->ID = ID;
   this->nombre = nombre;
   this->genero = genero;

@@ -61,12 +61,10 @@ Episodio::Episodio(int ID, string nombre, string genero, int duracion,
 void Episodio::setSerie(string serie) { this->serie = serie; }
 
 void Episodio::setNumEpisodio(string numEpisodio) {
-
   this->numEpisodio = numEpisodio;
 }
 
 void Episodio::setNumTemporada(string numTemporada) {
-
   this->numTemporada = numTemporada;
 }
 
@@ -79,7 +77,6 @@ string Episodio::getNumTemporada() { return numTemporada; }
 
 // Método redefinido
 void Episodio::imprimirInfo() {
-
   cout << endl;
   cout << "Episodio" << endl;
   cout << "ID: " << ID << endl;

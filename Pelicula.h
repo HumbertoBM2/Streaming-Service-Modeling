@@ -29,7 +29,6 @@ Pelicula::Pelicula(int ID, string nombre, string genero, int duracion,
 
 // Método redefinido
 void Pelicula::imprimirInfo() {
-
   cout << endl;
   cout << "Pelicula" << endl;
   cout << "ID: " << ID << endl;

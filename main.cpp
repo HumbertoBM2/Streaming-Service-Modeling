@@ -14,54 +14,42 @@ using namespace std;
 
 // Función para cargar los datos desde un archivo
 void cargarDatos(vector<Video *> &videos, vector<Serie *> &series) {
-
   // Se leen los archivos con las series y los videos
   string seriesFile = "datosSeries.txt";
   string videosFile = "datosVideos.txt";
   ifstream archivoSeries(seriesFile);
   ifstream archivoVideos(videosFile);
-
   // Se válida que la lectura de los archivos haya sido correcta
   if (archivoSeries.is_open()) {
-
     string lineaLeida;
     int numeroSerie;
     string nombreSerie;
-
     // Se lee el archivo de series
     while (getline(archivoSeries, lineaLeida)) {
-
       stringstream ss(lineaLeida); // Se lee cada palabra del renglón
       ss >> numeroSerie >> nombreSerie;
       series.push_back(new Serie(
           numeroSerie, nombreSerie)); // se crea un nuevo objeto de tipo Serie y
                                       // se agrega a un vector de apuntadores
     }
-
     archivoSeries.close();
     cout << "Los datos de las series se cargaron correctamente" << endl;
-
   } else {
-
     cout << "No se pudo abrir el archivo de series" << endl;
   }
 
   // Se lee la lista de videos
   if (archivoVideos.is_open()) {
-
     string lineaLeida;
     char tipo;
-
     // Se lee el archivo de videos hasta encontrar un renglón vacío
     while (getline(archivoVideos, lineaLeida)) {
-
       stringstream ss(lineaLeida);
       ss >> tipo;
       int ID;
       int calificacion;
       int duracion;
       string nombre, genero;
-
       // Se revisa la primera letra de cada renglón
       // Si la primera letra es p, se agrega un nuevo objeto de tipo película al
       // vector de videos Si la primera letra es e, se agrag un nuevo objeto de
@@ -72,9 +60,7 @@ void cargarDatos(vector<Video *> &videos, vector<Serie *> &series) {
         ss >> ID >> nombre >> genero >> duracion >> calificacion;
         videos.push_back(
             new Pelicula(ID, nombre, genero, duracion, calificacion));
-
       } else if (tipo == 'e') {
-
         string nombreSerie, EpisodioS, TemporadaS;
         int numEpisodio = 0, numTemporada = 0;
         ss >> ID >> nombre >> genero >> duracion >> calificacion >>
@@ -84,7 +70,6 @@ void cargarDatos(vector<Video *> &videos, vector<Serie *> &series) {
         videos.push_back(new Episodio(ID, nombre, genero, duracion,
                                       calificacion, nombreSerie, EpisodioS,
                                       TemporadaS));
-
         for (int i = 0; i < series.size(); i++) {
           if (series[i]->getTitulo() == nombreSerie) {
             // Se verifica si el episodio ya existe en la serie por su ID
@@ -111,9 +96,7 @@ void cargarDatos(vector<Video *> &videos, vector<Serie *> &series) {
 
     archivoVideos.close();
     cout << "Los datos de los videos se cargaron correctamente" << endl;
-
   } else {
-
     cout << "No se pudo abrir el archivo de videos" << endl;
   }
 }
@@ -227,25 +210,19 @@ int main() {
     // Switch case que manda llamar a la funcion correspondiente según la
     // elección del usuario
     switch (opcion) {
-
     case 1: {
-
       cargarDatos(videos, series);
       break;
     }
-
     case 2: {
-
       mostrarPeliculas(videos);
       break;
     }
-
     case 3: {
 
       mostrarSeries(series);
       break;
     }
-
     case 4: {
 
       int calificacion;
@@ -257,9 +234,7 @@ int main() {
       mostrarVideosCalificacionGenero(videos, calificacion, genero);
       break;
     }
-
     case 5: {
-
       string serie;
       int calificacion;
       cout << "Ingrese el nombre de la serie: ";
@@ -269,18 +244,14 @@ int main() {
       mostrarEpisodiosSerie(series, serie, calificacion);
       break;
     }
-
     case 6: {
-
       int calificacion;
       cout << "Ingrese la calificacion: ";
       cin >> calificacion;
       mostrarPeliculasCalificacion(videos, calificacion);
       break;
     }
-
     case 7: {
-
       string titulo;
       int valor;
       cout << "Ingrese el titulo a calificar: ";
@@ -290,39 +261,26 @@ int main() {
       calificarVideo(videos, titulo, valor);
       break;
     }
-
     case 0: {
-
       cout << "Saliendo..." << endl;
       break;
     }
-
     default: {
-
       cout << "Opcion invalida. Intente nuevamente." << endl;
       break;
     }
     }
-
     cout << endl;
-
   } while (opcion != 0);
-
   // Liberar la memoria de las variables dinámicas de tipo Video
   for (Video *video : videos) {
-
     delete video;
   }
-
   videos.clear();
-
   // Liberar la memoria de las variables dinámicas de tipo Serie
   for (Serie *serie : series) {
-
     delete serie;
   }
-
   series.clear();
-
   return 0;
 }
