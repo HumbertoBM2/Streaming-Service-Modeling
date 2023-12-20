@@ -11,32 +11,32 @@
 class Pelicula : public Video {
 
 public:
-  // Constructores
-  Pelicula(); // Default
-  Pelicula(int ID, string nombre, string genero, int duracion,
-           int calificacion); // Con parámetros
+    // Constructores
+    Pelicula(); // Default
+    Pelicula(int ID, string nombre, string genero, int duracion,
+        int calificacion); // Con parámetros
 
-  // Método redefinido
-  void imprimirInfo();
+    // Método redefinido
+    void imprimirInfo();
 };
 
 // Constructores
 Pelicula::Pelicula() : Video() {}
 
 Pelicula::Pelicula(int ID, string nombre, string genero, int duracion,
-                   int calificacion)
+    int calificacion)
     : Video(ID, nombre, genero, duracion, calificacion) {}
 
 // Método redefinido
 void Pelicula::imprimirInfo() {
-  cout << endl;
-  cout << "Pelicula" << endl;
-  cout << "ID: " << ID << endl;
-  cout << "Nombre: " << nombre << endl;
-  cout << "Genero: " << genero << endl;
-  cout << "Duracion: " << duracion << " minutos" << endl;
-  cout << "Calificacion: " << calificacion << endl;
-  cout << endl;
+    cout << endl;
+    cout << "Pelicula" << endl;
+    cout << "ID: " << ID << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Genero: " << genero << endl;
+    cout << "Duracion: " << duracion << " minutos" << endl;
+    cout << "Calificacion: " << calificacion << endl;
+    cout << endl;
 }
 
 #endif

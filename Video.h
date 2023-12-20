@@ -12,54 +12,54 @@ using namespace std;
 class Video {
 
 protected:
-  // Atributos protegidos
-  int ID;
-  string nombre;
-  string genero;
-  int duracion;
-  int calificacion;
+    // Atributos protegidos
+    int ID;
+    string nombre;
+    string genero;
+    int duracion;
+    int calificacion;
 
 public:
-  // Constructores
-  Video(); // Default
-  Video(int ID, string nombre, string genero, int duracion,
+    // Constructores
+    Video(); // Default
+    Video(int ID, string nombre, string genero, int duracion,
         int calificacion); // Con parámetros
 
-  // Setters
-  void setID(int ID);
-  void setNombre(string nombre);
-  void setGenero(string genero);
-  void setDuracion(int duracion);
-  void setCalificacion(int calificacion);
+    // Setters
+    void setID(int ID);
+    void setNombre(string nombre);
+    void setGenero(string genero);
+    void setDuracion(int duracion);
+    void setCalificacion(int calificacion);
 
-  // Getters
-  int getID();
-  string getNombre();
-  string getGenero();
-  int getDuracion();
-  int getCalificacion();
+    // Getters
+    int getID();
+    string getNombre();
+    string getGenero();
+    int getDuracion();
+    int getCalificacion();
 
-  // Métodos
-  virtual void imprimirInfo() = 0; // Método virtual puro
+    // Métodos
+    virtual void imprimirInfo() = 0; // Método virtual puro
 };
 
 // Constructores
 
 Video::Video() {
-  ID = 0;
-  nombre = "-";
-  genero = "-";
-  duracion = 0;
-  calificacion = 0;
+    ID = 0;
+    nombre = "-";
+    genero = "-";
+    duracion = 0;
+    calificacion = 0;
 }
 
 Video::Video(int ID, string nombre, string genero, int duracion,
-             int calificacion) {
-  this->ID = ID;
-  this->nombre = nombre;
-  this->genero = genero;
-  this->duracion = duracion;
-  this->calificacion = calificacion;
+    int calificacion) {
+    this->ID = ID;
+    this->nombre = nombre;
+    this->genero = genero;
+    this->duracion = duracion;
+    this->calificacion = calificacion;
 }
 
 // Setters
@@ -74,7 +74,7 @@ void Video::setDuracion(int duracion) { this->duracion = duracion; }
 
 void Video::setCalificacion(int calificacion) {
 
-  this->calificacion = calificacion;
+    this->calificacion = calificacion;
 }
 
 // Getters

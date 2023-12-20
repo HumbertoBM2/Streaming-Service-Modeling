@@ -11,61 +11,61 @@
 class Episodio : public Video {
 
 private:
-  // Atributos privados
-  string serie;
-  string numEpisodio;
-  string numTemporada;
+    // Atributos privados
+    string serie;
+    string numEpisodio;
+    string numTemporada;
 
 public:
-  // Constructores
+    // Constructores
 
-  // Default
-  Episodio();
-  // Con parámetros
-  Episodio(int ID, string nombre, string genero, int duracion, int calificacion,
-           string serie, string numEpisodio, string numTemporada);
+    // Default
+    Episodio();
+    // Con parámetros
+    Episodio(int ID, string nombre, string genero, int duracion, int calificacion,
+        string serie, string numEpisodio, string numTemporada);
 
-  // Setters
-  void setSerie(string serie);
-  void setNumEpisodio(string numEpisodio);
-  void setNumTemporada(string numTemporada);
+    // Setters
+    void setSerie(string serie);
+    void setNumEpisodio(string numEpisodio);
+    void setNumTemporada(string numTemporada);
 
-  // Getters
-  string getSerie();
-  string getNumEpisodio();
-  string getNumTemporada();
+    // Getters
+    string getSerie();
+    string getNumEpisodio();
+    string getNumTemporada();
 
-  // Método redefinido
-  void imprimirInfo();
+    // Método redefinido
+    void imprimirInfo();
 };
 
 // Constructores
 Episodio::Episodio() : Video() {
 
-  serie = "-";
-  numEpisodio = "-";
-  numTemporada = "-";
+    serie = "-";
+    numEpisodio = "-";
+    numTemporada = "-";
 }
 
 Episodio::Episodio(int ID, string nombre, string genero, int duracion,
-                   int calificacion, string serie, string numEpisodio,
-                   string numTemporada)
+    int calificacion, string serie, string numEpisodio,
+    string numTemporada)
     : Video(ID, nombre, genero, duracion, calificacion) {
 
-  this->serie = serie;
-  this->numEpisodio = numEpisodio;
-  this->numTemporada = numTemporada;
+    this->serie = serie;
+    this->numEpisodio = numEpisodio;
+    this->numTemporada = numTemporada;
 }
 
 // Setters
 void Episodio::setSerie(string serie) { this->serie = serie; }
 
 void Episodio::setNumEpisodio(string numEpisodio) {
-  this->numEpisodio = numEpisodio;
+    this->numEpisodio = numEpisodio;
 }
 
 void Episodio::setNumTemporada(string numTemporada) {
-  this->numTemporada = numTemporada;
+    this->numTemporada = numTemporada;
 }
 
 // Getters
@@ -77,17 +77,17 @@ string Episodio::getNumTemporada() { return numTemporada; }
 
 // Método redefinido
 void Episodio::imprimirInfo() {
-  cout << endl;
-  cout << "Episodio" << endl;
-  cout << "ID: " << ID << endl;
-  cout << "Nombre: " << nombre << endl;
-  cout << "Genero: " << genero << endl;
-  cout << "Duracion: " << duracion << " minutos" << endl;
-  cout << "Calificacion: " << calificacion << endl;
-  cout << "Serie: " << serie << endl;
-  cout << "Numero de episodio: " << numEpisodio << endl;
-  cout << "Numero de temporada: " << numTemporada << endl;
-  cout << endl;
+    cout << endl;
+    cout << "Episodio" << endl;
+    cout << "ID: " << ID << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Genero: " << genero << endl;
+    cout << "Duracion: " << duracion << " minutos" << endl;
+    cout << "Calificacion: " << calificacion << endl;
+    cout << "Serie: " << serie << endl;
+    cout << "Numero de episodio: " << numEpisodio << endl;
+    cout << "Numero de temporada: " << numTemporada << endl;
+    cout << endl;
 }
 
 #endif
